@@ -18,12 +18,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import androidx.core.content.ContextCompat.getSystemService
 
 
-
-
-
-
-
-
 class TaskAddItemBottomSheet : BottomSheetDialogFragment() {
     lateinit var binding: FragmentAddItemBottomSheetBinding
 
@@ -57,16 +51,20 @@ class TaskAddItemBottomSheet : BottomSheetDialogFragment() {
             }
         }
 
-       showKeyBoard()
+        showKeyBoard()
 
         return binding.root
 
 
     }
 
-    fun showKeyBoard(){
-        val inputMethodManager = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
-        inputMethodManager?.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
+    fun showKeyBoard() {
+        val inputMethodManager =
+            requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
+        inputMethodManager?.toggleSoftInput(
+            InputMethodManager.SHOW_FORCED,
+            InputMethodManager.HIDE_IMPLICIT_ONLY
+        );
     }
 
     private fun showError() {
